@@ -19,8 +19,6 @@ export default function PhysicalPhoto({
                                             width = 340,
                                             selected = false,
                                             onClick,
-                                            onFocus,
-                                            onBlur,
                                             tabIndex,
                                             role,
                                             ariaSelected
