@@ -34,7 +34,7 @@ const Header: React.FC<Props> = ({ onNavigate, active }) => {
 
   return (
     <header style={{position:'sticky',top:0,background:'rgba(255,255,255,0.95)',backdropFilter:'blur(6px)',zIndex:900,boxShadow:'0 2px 12px rgba(0,0,0,0.06)'}}>
-      <div className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding:'0.75rem 0',position:'relative'}}>
+      <div className="container" style={{display:'flex',alignItems:'center',justifyContent:'space-between',padding: isMobile ? '0.75rem 0.5' : '0.75rem 0',position:'relative'}}>
         <div style={{fontWeight:700,color:'var(--primary)'}}>{config.brideName.split(' ')[0]} & {config.groomName.split(' ')[0]}</div>
 
         {/* Desktop navigation */}
