@@ -49,7 +49,7 @@ const RSVP:React.FC = ()=>{
       <div className="translucent-block stamp-border">
         <div className="center">
           <h2 style={{color:'var(--primary)'}}>Potvrzení účasti</h2>
-          <p style={{opacity:0.8}}>Prosíme potvrďte svou účast do <strong>{new Date(config.rsvpDeadline).toLocaleDateString('cs-CZ',{day:'numeric',month:'long',year:'numeric'})}</strong></p>
+          <p style={{opacity:0.8}}>Prosíme potvrďte svou účast <wbr/>do <strong>{new Date(config.rsvpDeadline).toLocaleDateString('cs-CZ',{day:'numeric',month:'long',year:'numeric'})}</strong></p>
         </div>
         <div style={{maxWidth:700,margin:'16px auto 0'}}>
           {submitted && <div style={{padding:12,background:'#d4edda',borderRadius:8,marginBottom:12}}>Děkujeme! Těšíme se na vás.</div>}

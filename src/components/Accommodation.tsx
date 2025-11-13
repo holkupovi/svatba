@@ -16,7 +16,7 @@ const Accommodation:React.FC = ()=>{
               <p style={{opacity:0.8}}>{h.address}</p>
               <p><a href={`tel:${h.phone}`}>{h.phone}</a></p>
               <p style={{fontStyle:'italic',opacity:0.8}}>{h.notes}</p>
-              <a href={h.bookingUrl} target="_blank" rel="noreferrer" style={{display:'inline-block',marginTop:8,padding:'0.5rem 1rem',borderRadius:999,background:'var(--secondary)',color:'white',textDecoration:'none'}}>Rezervovat</a>
+              <a href={h.bookingUrl} target="_blank" rel="noreferrer" style={{display:'inline-block',marginTop:8,padding:'0.5rem 1rem',borderRadius:999,background:'var(--primary)',color:'white',textDecoration:'none'}}>Rezervovat</a>
             </div>
           ))}
         </div>

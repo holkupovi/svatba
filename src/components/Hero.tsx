@@ -12,7 +12,7 @@ const Hero: React.FC<{countdown:{days:number,hours:number,minutes:number,seconds
     <section id="home" style={{marginBottom: '4rem', height:'80vh',display:'flex',alignItems:'center',justifyContent:'center',backgroundImage:`linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url(${config.landingBackground})`,backgroundSize:'cover',backgroundPosition:'center',color:'white',textAlign:'center'}}>
       <div>
         <Heart size={48} style={{color:'var(--primary)',marginBottom:'1rem'}} />
-        <h1 style={{fontSize:'clamp(2rem,6vw,3.5rem)',margin:0}}>{config.brideName} & {config.groomName}</h1>
+        <h1 style={{fontSize:'clamp(2rem,6vw,3.5rem)',margin:0}}>{config.brideName} <wbr/>& {config.groomName}</h1>
         <p style={{marginTop:'1rem',marginBottom:'1rem'}}>{formatDate(config.weddingDate)} — {config.weddingTime}</p>
 
         <div style={{display:'flex',gap:'1rem',justifyContent:'center',marginBottom:'1rem'}}>
