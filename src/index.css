@@ -14,11 +14,11 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   background-color: var(--bg); /* fallback while image loads */
-  background-image: url('./assets/background/background.png');
+  background-image: url('./assets/background/background2.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; /* stretch to cover entire viewport */
-  background-attachment: fixed; /* keep background fixed on scroll */
+  background-attachment: scroll; /* scrolls with content */
 }
 a{color:inherit}
 button{font:inherit}
