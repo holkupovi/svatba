@@ -31,6 +31,9 @@ export default function PhysicalPhoto({
 
     const frameRadius = 4;
 
+    // Detect if source is a video based on file extension
+    const isVideo = src ? /\.(mp4|3gp|webm|ogg|mov)$/i.test(src) : false;
+
     const baseTransform = selected
         ? 'scale(1.5)'
         : `rotate(${tiltDeg.current}deg) rotateX(${tiltXDeg.current}deg) rotateY(${tiltYDeg.current}deg)`;
@@ -64,19 +67,36 @@ export default function PhysicalPhoto({
                     transition: 'transform 250ms ease, box-shadow 200ms ease',
                     willChange: 'transform, box-shadow',
                     zIndex: selected ? 2 : 1,
-                    // slight paper texture hint via background gradient
-                    backgroundImage:
-                        'linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(248,248,248,0.98) 100%)'
                 }}
             >
                 <div style={{ position: 'relative', borderRadius: frameRadius - 2, overflow: 'hidden' }}>
-                    <img src={src} alt={caption || 'Photo'} style={{
-                        width: '100%',
-                        height: 'auto',
-                        display: 'block',
-                        borderRadius: frameRadius - 2,
-                        transform: 'translateZ(1px)'
-                    }} />
+                    {isVideo ? (
+                        <video
+                            src={src}
+                            controls
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                                display: 'block',
+                                borderRadius: frameRadius - 2,
+                                transform: 'translateZ(1px)'
+                            }}
+                        >
+                            Your browser does not support the video tag.
+                        </video>
+                    ) : (
+                        <img
+                            src={src}
+                            alt={caption || 'Photo'}
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                                display: 'block',
+                                borderRadius: frameRadius - 2,
+                                transform: 'translateZ(1px)'
+                            }}
+                        />
+                    )}
 
                     {/* Curvature/highlight overlay to emulate a gentle bend */}
                     <div aria-hidden={true} style={{

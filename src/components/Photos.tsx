@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { config } from '../config'
 import PhysicalPhoto from './PhysicalPhoto'
 
-const SCROLL_SPEED_PX_PER_SEC = 20 // slow and subtle
+const SCROLL_SPEED_PX_PER_SEC = 40 // slow
 const MAX_DT = 0.05 // cap delta time to avoid large jumps (~50ms)
 const BIG_DT_THRESHOLD = 0.5 // ignore movement if tab was inactive for a long time
 

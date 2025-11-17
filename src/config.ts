@@ -1,4 +1,4 @@
-const photoModules = import.meta.glob('./assets/*.{jpg,jpeg,png,JPG,JPEG,PNG,webp,WEBP}', { eager: true, as: 'url' }) as Record<string, string>;
+const photoModules = import.meta.glob('./assets/pictures*.{jpg,jpeg,png,JPG,JPEG,PNG,webp,WEBP,mp4,3gp,webm,ogg,mov}', { eager: true, as: 'url' }) as Record<string, string>;
 
 const photos = Object.entries(photoModules)
   .map(([path, url]) => {
